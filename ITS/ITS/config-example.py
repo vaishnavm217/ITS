@@ -1,0 +1,5 @@
+#ADD VARIABLES HERE AND RENAME TO config.py
+DATA={
+"DB_PASS":"",
+"DB_USERNAME":"",
+}

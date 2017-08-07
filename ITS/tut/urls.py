@@ -17,9 +17,10 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from . import views
 
+app_name="tut"
 urlpatterns = [
-    url(r'^$',views.tut1),
-    url(r'^tut1/',views.tut1),
-    url(r'^tut3/',views.tut3,name="views"),
-    url(r'^tut4/',views.tut4,name="forms"),
+    url(r'^$',views.index),
+    url(r'^(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
+    url(r'^(?P<question_id>[0-9]+)/results/$', views.results, name='results'),
+    url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
 ]
